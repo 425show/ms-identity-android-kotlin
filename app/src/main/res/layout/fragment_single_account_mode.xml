@@ -46,7 +46,7 @@
                         android:id="@+id/scope"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:text="user.read"
+                        android:text="https://jpdab2c.onmicrosoft.com/authz-admin/Access"
                         android:textSize="12sp" />
 
                     <TextView
@@ -73,7 +73,7 @@
                     android:layout_weight="3"
                     android:layout_gravity="center_vertical"
                     android:textStyle="bold"
-                    android:text="MSGraph Resource URL" />
+                    android:text="API URL" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -85,7 +85,7 @@
                         android:id="@+id/msgraph_url"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:text="https://graph.microsoft.com/v1.0/me"
+                        android:text="https://saywhat.azurewebsites.net/who"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -177,7 +177,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:text="Get Graph Data Interactively"
+                    android:text="Get API data interactively"
                     android:enabled="false"/>
 
                 <Button
@@ -185,7 +185,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:text="Get Graph Data Silently"
+                    android:text="Get API data silently"
                     android:enabled="false"/>
             </LinearLayout>
 

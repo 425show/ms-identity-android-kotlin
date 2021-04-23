@@ -1,5 +1,5 @@
 {
-  "client_id" : "0984a7b6-bc13-4141-8b0d-8f767e136bb7",
+  "client_id" : "0a9de295-851e-4b3d-b8a5-99edd03e4872",
   "authorization_user_agent" : "DEFAULT",
   "redirect_uri" : "msauth://com.azuresamples.msalandroidkotlinapp/1wIqXSqBj7w%2Bh11ZifsnqwgyKrY%3D",
   "account_mode" : "SINGLE",
@@ -7,11 +7,8 @@
   "shared_device_mode_supported": true,
   "authorities" : [
     {
-      "type": "AAD",
-      "audience": {
-        "type": "AzureADandPersonalMicrosoftAccount",
-        "tenant_id": "common"
-      }
+      "type": "B2C",
+      "authority_url": "https://jpdab2c.b2clogin.com/tfp/jpdab2c.onmicrosoft.com/b2c_1a_hrd_signup_signin/"
     }
   ]
 }

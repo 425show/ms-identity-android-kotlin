@@ -6,15 +6,11 @@ apply plugin: 'kotlin-android-extensions'
 
 allprojects {
     repositories {
-        mavenLocal()
+        mavenCentral()
         google()
+        mavenLocal()
         maven {
-            name "vsts-maven-adal-android"
-            url "https://identitydivision.pkgs.visualstudio.com/_packaging/AndroidADAL/maven/v1"
-            credentials {
-                username System.getenv("ENV_VSTS_MVN_ANDROIDADAL_USERNAME") != null ? System.getenv("ENV_VSTS_MVN_ANDROIDADAL_USERNAME") : project.findProperty("vstsUsername")
-                password System.getenv("ENV_VSTS_MVN_ANDROIDADAL_ACCESSTOKEN") != null ? System.getenv("ENV_VSTS_MVN_ANDROIDADAL_ACCESSTOKEN") : project.findProperty("vstsMavenAccessToken")
-            }
+            url 'https://pkgs.dev.azure.com/MicrosoftDeviceSDK/DuoSDK-Public/_packaging/Duo-SDK-Feed/maven/v1'
         }
         jcenter()
     }
@@ -70,13 +66,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.android.volley:volley:1.1.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    if (findProject(':msal') != null) {
-        // For developer team only.
-        localImplementation project(':msal')
-        externalImplementation 'com.microsoft.identity.client:msal:1.0.+'
-    }
-    else {
-        // Downloads and Builds MSAL from maven central.
-        implementation 'com.microsoft.identity.client:msal:1.0.+'
-    }
+    implementation 'com.microsoft.identity.client:msal:2.+'
 }

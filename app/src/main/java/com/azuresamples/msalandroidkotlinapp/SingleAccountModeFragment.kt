@@ -21,8 +21,8 @@ import org.json.JSONObject
 class SingleAccountModeFragment : Fragment() {
     private val TAG = SingleAccountModeFragment::class.java.simpleName
 
-    /* Azure AD v2 Configs */
-    private val AUTHORITY = "https://login.microsoftonline.com/common"
+    /* Azure AD B2C authority - include the user flow/policy ID */
+    private val AUTHORITY = "https://jpdab2c.b2clogin.com/tfp/jpdab2c.onmicrosoft.com/b2c_1a_hrd_signup_signin/"
 
     /* Azure AD Variables */
     private var mSingleAccountApp: ISingleAccountPublicClientApplication? = null

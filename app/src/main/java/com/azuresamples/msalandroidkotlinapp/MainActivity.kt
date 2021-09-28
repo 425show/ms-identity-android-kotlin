@@ -14,7 +14,8 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, OnFragmentInterationListener  {
+class MainActivity : AppCompatActivity(),
+    NavigationView.OnNavigationItemSelectedListener, OnFragmentInterationListener  {
 
     internal enum class AppFragment {
         SingleAccount,
@@ -88,12 +89,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun setHeaderString(fragment: AppFragment) {
         when (fragment) {
-            MainActivity.AppFragment.SingleAccount -> {
+            AppFragment.SingleAccount -> {
                 supportActionBar!!.title = "Single Account Mode"
                 return
             }
 
-            MainActivity.AppFragment.MultipleAccount -> {
+            AppFragment.MultipleAccount -> {
                 supportActionBar!!.title = "Multiple Account Mode"
                 return
             }
@@ -102,12 +103,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun displayFragment(fragment: AppFragment) {
         when (fragment) {
-            MainActivity.AppFragment.SingleAccount -> {
+            AppFragment.SingleAccount -> {
                 attachFragment(SingleAccountModeFragment())
                 return
             }
 
-            MainActivity.AppFragment.MultipleAccount -> {
+            AppFragment.MultipleAccount -> {
                 attachFragment(MultipleAccountModeFragment())
                 return
             }
